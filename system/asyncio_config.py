@@ -1,0 +1,9 @@
+import sys
+
+
+def stepup_asyncio() -> None:
+    if sys.platform == "win32":
+        import asyncio
+        asyncio.set_event_loop_policy(
+            asyncio.WindowsSelectorEventLoopPolicy()
+        )
